@@ -14,6 +14,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	dh_clean pastebinit.1
+	rm -f po/mo/*/LC_MESSAGES/pastebinit.mo
 
 install: build
 	dh_testdir
@@ -26,15 +27,13 @@ binary-arch: build install
 binary-indep: build install
 	dh_testdir
 	dh_testroot
+	dh_pycentral
 	dh_installchangelogs 
 	dh_installdocs
 	dh_installman pastebinit.1
-	dh_link
-	dh_strip
 	dh_compress
 	dh_fixperms
 	dh_installdeb
-	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

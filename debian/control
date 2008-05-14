@@ -1,28 +1,31 @@
 Source: pastebinit
 Section: misc
 Priority: optional
-Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
-Build-Depends: debhelper (>= 5)
-Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl
+Maintainer: Rolf Leggewie <foss@rolf.leggewie.biz>
+Uploaders: Rolf Leggewie <foss@rolf.leggewie.biz>, David Paleino <d.paleino@gmail.com>
+Build-Depends: debhelper (>= 5.0.38)
+Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl, python-central (>= 0.5.6)
+XS-Python-Version: all
 Standards-Version: 3.7.3
+Vcs-Bzr: https://code.launchpad.net/~pastebinit-developers/pastebinit/debian
+Homepage: http://launchpad.net/pastebinit/
 
 Package: pastebinit
 Architecture: all
-Depends: ${python:Depends}
+Depends: python, ${python:Depends}
 XB-Python-Version: ${python:Versions}
 Description: command-line pastebin client
- pastebinit is a command-line tool to send data
- to a "pastebin": a web site which allows its
- users to upload snippets of text for public
- viewing.
+ pastebinit is a command-line tool to send data to a "pastebin": a web site 
+ which allows its users to upload snippets of text for public viewing.
  .
- It can receive data from a pipe or from a file
- passed as argument.
+ It can receive data from a pipe or from a file passed as argument.
  .
  It supports these pastebins:
   - http://*.pastebin.com
-  - http://pastebin.ca
-  - http://rafb.net/paste
-  - http://pastebin.archlinux.org
- .
- Homepage: http://www.stgraber.org/category/pastebinit
+  - http://pastebin.mozilla.org
+  - http://rafb.net
+  - http://yourpaste.net
+  - http://paste.ubuntu.com
+  - http://*.paste.f-box.org
+  - http://*.1t2.us
+  - http://paste.stgraber.org
