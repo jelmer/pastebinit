@@ -1,3 +1,11 @@
+pastebinit (0.10-2) unstable; urgency=low
+
+   * handle input from stdin properly. Closes: #499410
+     this fix is important enough that it should be in a stable release
+     the diff is upstream bzr revs 44 and 55
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Mon, 29 Dec 2008 14:58:56 +0100
+
 pastebinit (0.10-1) unstable; urgency=low
 
   * initial debian release. backpush from ubuntu. Closes: #425226

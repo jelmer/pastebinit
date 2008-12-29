@@ -6,7 +6,7 @@ Uploaders: Rolf Leggewie <foss@rolf.leggewie.biz>, David Paleino <d.paleino@gmai
 Build-Depends: debhelper (>= 5.0.38)
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl, python-central (>= 0.5.6)
 XS-Python-Version: all
-Standards-Version: 3.7.3
+Standards-Version: 3.8.0
 Vcs-Bzr: https://code.launchpad.net/~pastebinit-developers/pastebinit/debian
 Homepage: http://launchpad.net/pastebinit/
 
