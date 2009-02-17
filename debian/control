@@ -2,7 +2,6 @@ Source: pastebinit
 Section: misc
 Priority: optional
 Maintainer: Rolf Leggewie <foss@rolf.leggewie.biz>
-Uploaders: Rolf Leggewie <foss@rolf.leggewie.biz>, David Paleino <d.paleino@gmail.com>
 Build-Depends: debhelper (>= 5.0.38)
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl, python-central (>= 0.5.6)
 XS-Python-Version: all
@@ -15,17 +14,5 @@ Architecture: all
 Depends: python, ${python:Depends}
 XB-Python-Version: ${python:Versions}
 Description: command-line pastebin client
- pastebinit is a command-line tool to send data to a "pastebin": a web site 
+ pastebinit is a command-line tool to send data to a "pastebin", a web site 
  which allows its users to upload snippets of text for public viewing.
- .
- It can receive data from a pipe or from a file passed as argument.
- .
- It supports these pastebins:
-  - http://*.pastebin.com
-  - http://pastebin.mozilla.org
-  - http://rafb.net
-  - http://yourpaste.net
-  - http://paste.ubuntu.com
-  - http://*.paste.f-box.org
-  - http://*.1t2.us
-  - http://paste.stgraber.org
