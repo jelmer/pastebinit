@@ -1,8 +1,24 @@
-pastebinit (0.11-2) unstable; urgency=low
+pastebinit (0.11.2-0ubuntu1) jaunty; urgency=low
 
-  * rebuild for unstable after lenny release
+  * new bugfix release (0.11.2)
+   * Fix typo in manpage causing FTBFS
 
- -- Rolf Leggewie <foss@rolf.leggewie.biz>  Tue, 17 Feb 2009 16:44:15 +0900
+ -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 10 Mar 2009 01:25:02 -0400
+
+pastebinit (0.11.1-0ubuntu1) jaunty; urgency=low
+
+  * new bugfix release (0.11.1)
+   * Update translations
+   * Fix pastebinit bugs as reported on Launchpad.
+   * Disable 1t2.us as it no longer works.
+   * Disable all options specifc to 1t2.us (commented out).
+   * Fix remainning pastebins.
+   * Update manpage. (LP: #157082)
+   * Merge fix from Spiro Harvey (LP: #312456)
+   * Change pastebinit's default behavior to reading from stdin (Thanks fta)
+   * Code cleanup
+
+ -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 10 Mar 2009 01:05:36 -0400
 
 pastebinit (0.11-1) experimental; urgency=low
 
