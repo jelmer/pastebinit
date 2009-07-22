@@ -1,3 +1,14 @@
+pastebinit (0.11.2-1) unstable; urgency=low
+
+  * push back new upstream release from Ubuntu Jaunty. (Closes: #519879)
+    * fix parsing of config file. (Closes: #524422)
+    * properly read from stdin. (Closes: #532504)
+  * update to 3.8.2 standard.  No changes necessary.
+  * update watch file
+  * allow uploads by Debian Maintainers
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Wed, 22 Jul 2009 03:15:22 +0200
+
 pastebinit (0.11.2-0ubuntu1) jaunty; urgency=low
 
   * new bugfix release (0.11.2)
@@ -19,6 +30,12 @@ pastebinit (0.11.1-0ubuntu1) jaunty; urgency=low
    * Code cleanup
 
  -- Stéphane Graber <stgraber@ubuntu.com>  Tue, 10 Mar 2009 01:05:36 -0400
+
+pastebinit (0.11-2) unstable; urgency=low
+
+  * rebuild for unstable after lenny release
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Tue, 17 Feb 2009 16:44:15 +0900
 
 pastebinit (0.11-1) experimental; urgency=low
 

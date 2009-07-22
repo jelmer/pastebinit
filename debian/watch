@@ -1,2 +1,2 @@
 version=3
-http://www.stgraber.org/download/projects/pastebin/ (?:.*/)?pastebinit-?_?([\d+\.]+|\d+)\.tar.* debian uupdate
+https://launchpad.net/pastebinit/+download http://launchpad.net/pastebinit/.*/pastebinit-(.+).tar.gz
