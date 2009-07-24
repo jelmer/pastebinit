@@ -24,7 +24,7 @@ try:
 	gettext.textdomain("pastebinit")
 
 	defaultPB = "http://pastebin.com" #Default pastebin
-	version = "0.9" #Version number to show in the usage
+	version = "0.10" #Version number to show in the usage
 	configfile = os.environ.get('HOME') + "/.pastebinit.xml"
 
 	# Custom urlopener to handle 401's
@@ -37,7 +37,7 @@ try:
 		"Return the parameters array for the selected pastebin"
 		params={}
 		# pastebin.com v0.50
-		if re.search("http://((([a-zA-Z0-9\-_\.]*)(pastebin\.com)))", website) and not website == "http://www.pastebin.com":
+		if re.search("http://((([a-zA-Z0-9\-_\.]*)(pastebin\.com)))", website) and not website == "http://www.pastebin.com" or website == "http://pastebin.mozilla.org":
 			params['poster'] = user
 			params['code2'] = content
 			params['version'] = version
@@ -46,27 +46,47 @@ try:
 			params['paste'] = "Send" 
 			params['remember'] = "0" #Do you want a cookie ?
 			params['expiry'] = "f" #The expiration, f = forever
-		elif website == "http://pastebin.ca":
-			params['name'] = user
-			params['content'] = content
-			params['type'] = "1" #The expiration, 1 = raw
-			params['save'] = "0" #Do you want a cookie ?
-			params['s'] = "Submit Post"
-			params['regexp'] = '">http://pastebin.ca/(.*)</a></p><p>'
-		elif website == "http://pastebin.archlinux.org":
-			params['poster']=user
-			params['code2']=content
-			params['format']="text" #The format, for syntax hilighting
-			params['homosapien']="1"
-			params['paste']="Send" 
-			params['remember']="0" #Do you want a cookie ?
-			params['expiry']="f" #The expiration, f = forever
-		elif website == "http://rafb.net/paste" or website == "http://rafb.net/paste/":
-			params['page']="paste.php"
+#		elif website == "http://pastebin.ca":
+#			params['name'] = user
+#			params['content'] = content
+#			params['type'] = "1" #The expiration, 1 = raw
+#			params['save'] = "0" #Do you want a cookie ?
+#			params['s'] = "Submit Post"
+#			params['regexp'] = '">http://pastebin.ca/(.*)</a></p><p>
+		elif re.search("http://((([a-zA-Z0-9\-_\.]*)(paste\.f\-box\.org|1t2\.us|paste\.stgraber\.org)))", website):	
+			params['poster'] = user
+			params['jid'] = jabberid
+			params['code2'] = content
+			params['parent_pid'] = parentpid #For reply, "" means homepage (new thread)
+			params['format'] = format #The format, for syntax hilighting
+			params['paste'] = "Send"
+			params['remember'] = "0" #Do you want a cookie ?
+			params['expiry'] = "f" #The expiration, f = forever
+			params['permatag'] = permatag
+			params['title'] = title
+			params['username'] = username
+			params['password'] = password
+			params['version'] = version
+		elif website == "http://rafb.net" :
+			params['page']="/paste/paste.php"
 			params['nick']=user
 			params['text']=content
 			params['lang']="Plain Text" #The format, for syntax hilighting
 			params['cvt_tabs']="No"
+		elif website == "http://yourpaste.net":
+			params['syntax'] = format
+			params['name'] = user
+			params['desc'] = title
+			params['expire'] = "0" # Forever
+			params['code'] = content
+			params['private'] = "0" # It's not a private post
+			params['remember'] = "0" # Cookies? ;)
+			params['page'] = "/paste"
+			params['regexp'] = '">http://yourpaste.net(.*)/</a>'
+		elif website == "http://paste.ubuntu.com":
+			params['poster'] = user
+			params['syntax'] = format #The format, for syntax hilighting
+			params['content'] = content
 		else:
 			sys.exit(_("Unknown website, please post a bugreport to request this pastebin to be added (%s)") % website)
 		return params
@@ -95,7 +115,7 @@ try:
 		print _("\t-i <filename> (or pipe the text)")
 		print _("Optional arguments:")
 		print _("\t-b <pastebin url:default is '%s'>") % website
-		print _("\t-a <author:default is '%s'>") % website
+		print _("\t-a <author:default is '%s'>") % user
 		print _("\t-f <format of paste:default is '%s'>") % format
 		print _("\t-r <parent posts ID:defaults to none>")
 		print _("Optional arguments supported only by 1t2.us and paste.stgraber.org:")
@@ -134,7 +154,7 @@ try:
 		f.close()
 		gotconfigxml = 1
 	except KeyboardInterrupt:
-		sys.exit(_("KeyboardInterrupt catched."))
+		sys.exit(_("KeyboardInterrupt caught."))
 	except:
 		gotconfigxml = 0
 
@@ -147,7 +167,7 @@ try:
 			format = getFirstNodeText(configxml, "format")
 			jabberid = getFirstNodeText(configxml, "jabberid")
 		except KeyboardInterrupt:
-			sys.exit(_("KeyboardInterrupt catched."))
+			sys.exit(_("KeyboardInterrupt caught."))
 		except:
 			print _("Error parsing configuration file!")
 			print _("Please ensure that your configuration file looks similar to the following:")
@@ -172,7 +192,7 @@ try:
 	try:
 		optlist, list = getopt.getopt(sys.argv[1:], 'i:f:b:a:r:j:t:m:u:p:')
 	except KeyboardInterrupt:
-		sys.exit(_("KeyboardInterrupt catched."))
+		sys.exit(_("KeyboardInterrupt caught."))
 	except getopt.GetoptError:
 		print _("Invalid arguments!\n")
 		Usage()
@@ -211,22 +231,26 @@ try:
 		sys.exit(1)
 	elif filename == "-" and content == "":
 		content = sys.stdin.read()
-		sys.exit(_("KeyboardInterrupt catched."))
+		sys.exit(_("KeyboardInterrupt caught."))
 	elif content == "":
 		try:
 			f = open(filename)
 			content = f.read()
 			f.close()
 		except KeyboardInterrupt:
-			sys.exit(_("KeyboardInterrupt catched."))
+			sys.exit(_("KeyboardInterrupt caught."))
 		except:
 			sys.exit(_("Unable to read from: %s") % filename)
 
 	params = getParameters(website, content, user, jabberid, version, format, parentpid, permatag, title, username, password) #Get the parameters array
-	website+="/"
+	
+	if not re.search(".*/", website):
+		website += "/"
+
 	reLink=None
 	if params.__contains__("page"):
 		website+=params['page']
+		tmp_page=params['page']
 		params.__delitem__("page")
 	if params.__contains__("regexp"):
 		reLink=params['regexp']
@@ -238,13 +262,15 @@ try:
 
 	try:
 		if reLink: #Check if we have to apply a regexp
+			website = website.replace(tmp_page, "")
 			print website + re.split(reLink, page.read())[1] #Print the result of the Regexp
 		else:
 			print page.url #Get the final page and show the ur
 	except KeyboardInterrupt:
-		sys.exit(_("KeyboardInterrupt catched."))
+		sys.exit(_("KeyboardInterrupt caught."))
 	except:
+		raise
 		sys.exit(_("Unable to read or parse the result page, it could be a server timeout or a change server side, try with another pastebin."))
 
 except KeyboardInterrupt:
-	sys.exit(_("KeyboardInterrupt catched."))
+	sys.exit(_("KeyboardInterrupt caught."))
