@@ -7,8 +7,9 @@ Build-Depends: debhelper (>= 5.0.38)
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl, python-central (>= 0.5.6)
 XS-Python-Version: all
 Standards-Version: 3.8.2
-Vcs-Bzr: https://code.launchpad.net/~pastebinit-developers/pastebinit/debian
 Homepage: http://launchpad.net/pastebinit/
+Vcs-Browser: http://git.debian.org/?p=collab-maint/pastebinit.git
+Vcs-Git: git://git.debian.org/collab-maint/pastebinit.git
 
 Package: pastebinit
 Architecture: all
