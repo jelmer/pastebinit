@@ -1,2 +1,3 @@
-pastebinit	usr/bin/
-po/mo/*		usr/share/locale/
+pastebin.d/ etc/
+pastebinit  usr/bin/
+po/mo/*     usr/share/locale/

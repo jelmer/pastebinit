@@ -1,3 +1,13 @@
+pastebinit (1.1-1) unstable; urgency=low
+
+  * new upstream release (Closes: #572728)
+  * update to Standard 3.8.4
+    * add ${misc:Depends} to run-time dependencies (no real changes expected)
+    * move to DebSrc3.0 format
+  * maintain packaging information in git rather than bzr from now on
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Mon, 19 Apr 2010 04:58:36 +0900
+
 pastebinit (0.11.2-1) unstable; urgency=low
 
   * push back new upstream release from Ubuntu Jaunty. (Closes: #519879)
