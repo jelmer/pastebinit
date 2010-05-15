@@ -66,12 +66,6 @@ try:
 			params['username'] = username
 			params['password'] = password
 			params['version'] = version
-		elif website == "http://rafb.net" :
-			params['page']="/paste/paste.php"
-			params['nick']=user
-			params['text']=content
-			params['lang']="Plain Text" #The format, for syntax hilighting
-			params['cvt_tabs']="No"
 		elif website == "http://yourpaste.net":
 			params['syntax'] = format
 			params['name'] = user
