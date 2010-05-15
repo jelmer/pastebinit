@@ -1,3 +1,11 @@
+pastebinit (1.1-2) unstable; urgency=low
+
+  * debian/copyright: update to latest status
+  * debian/patches/10-drop_rafb.net.patch: EOL rafb.net support
+  * debian/patches/20-set_sensible_expiry.patch: expire pastebins (LP: #580816)
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sat, 15 May 2010 18:36:44 +0900
+
 pastebinit (1.1-1) unstable; urgency=low
 
   * new upstream release (Closes: #572728)
