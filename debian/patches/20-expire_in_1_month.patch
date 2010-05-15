@@ -1,0 +1,56 @@
+Index: pastebinit/pastebin.d/fpaste.org.conf
+===================================================================
+--- pastebinit.orig/pastebin.d/fpaste.org.conf	2010-05-15 11:16:22.000000000 +0200
++++ pastebinit/pastebin.d/fpaste.org.conf	2010-05-15 11:18:29.000000000 +0200
+@@ -11,4 +11,4 @@
+ 
+ [defaults]
+ submit = "paste it!"
+-expire_options = 3600
++expire_options = 2592000
+Index: pastebinit/pastebin.d/paste.debian.net.conf
+===================================================================
+--- pastebinit.orig/pastebin.d/paste.debian.net.conf	2010-05-15 11:16:23.000000000 +0200
++++ pastebinit/pastebin.d/paste.debian.net.conf	2010-05-15 11:20:45.000000000 +0200
+@@ -13,4 +13,4 @@
+ [defaults]
+ lang = -1
+ remember = 0
+-expire = 259200
++expire = 2592000
+Index: pastebinit/pastebin.d/pastebin.com.conf
+===================================================================
+--- pastebinit.orig/pastebin.d/pastebin.com.conf	2010-05-15 11:12:06.000000000 +0200
++++ pastebinit/pastebin.d/pastebin.com.conf	2010-05-15 11:15:56.000000000 +0200
+@@ -18,7 +18,7 @@
+ submit = submit
+ paste_format = text
+ private = 0
+-expiry = N
++expiry = 1M
+ subdomain = ""
+ email = ""
+ page = "/api_public.php"
+Index: pastebinit/pastebin.d/slexy.org.conf
+===================================================================
+--- pastebinit.orig/pastebin.d/slexy.org.conf	2010-05-15 11:16:24.000000000 +0200
++++ pastebinit/pastebin.d/slexy.org.conf	2010-05-15 11:22:15.000000000 +0200
+@@ -21,4 +21,4 @@
+ permissions = 0
+ comment = ""
+ linenumbers = 0
+-expire = 0
++expire = 2592000
+Index: pastebinit/pastebin.d/yourpaste.net.conf
+===================================================================
+--- pastebinit.orig/pastebin.d/yourpaste.net.conf	2010-05-15 11:16:25.000000000 +0200
++++ pastebinit/pastebin.d/yourpaste.net.conf	2010-05-15 11:23:06.000000000 +0200
+@@ -14,7 +14,7 @@
+ regexp = regexp
+ 
+ [defaults]
+-expire = 0
++expire = 1m
+ private = 0
+ remember = 0
+ page = '/paste'
