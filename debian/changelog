@@ -1,3 +1,11 @@
+pastebinit (0.9-0ubuntu1.1) hardy-proposed; urgency=low
+
+  * update to new pastebin.com API (LP: #526849)
+    Many thanks to Moritz Naumann for the original patch
+  * update Maintainer field in debian/control
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sat, 15 May 2010 16:01:20 +0900
+
 pastebinit (0.9-0ubuntu1) hardy; urgency=low
 
   * New upstream release (0.9)
