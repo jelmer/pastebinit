@@ -1,0 +1,14 @@
+Index: pastebinit/pastebinit.xml
+===================================================================
+--- pastebinit.orig/pastebinit.xml	2010-05-15 11:00:12.000000000 +0200
++++ pastebinit/pastebinit.xml	2010-05-15 11:00:44.000000000 +0200
+@@ -110,9 +110,6 @@
+         <para>http://1t2.us (including subdomains)</para>
+       </listitem> -->
+       <listitem>
+-        <para>http://rafb.net</para>
+-      </listitem>
+-      <listitem>
+         <para>http://slexy.org</para>
+       </listitem>
+       <listitem>
