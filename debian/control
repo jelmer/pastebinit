@@ -1,7 +1,7 @@
 Source: pastebinit
 Section: misc
 Priority: optional
-Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 5)
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl
 Standards-Version: 3.7.3
