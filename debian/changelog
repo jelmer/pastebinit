@@ -1,3 +1,10 @@
+pastebinit (0.10-2lenny1) stable; urgency=low
+
+  * backport Ubuntu patch to update to new pastebin.com API (Closes: #592167)
+  * drop rafb.net support which has been offline for a while now
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sun, 08 Aug 2010 01:19:16 +0200
+
 pastebinit (0.10-2) unstable; urgency=low
 
    * handle input from stdin properly. Closes: #499410
