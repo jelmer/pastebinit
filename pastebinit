@@ -44,7 +44,7 @@ try:
 			params['paste_format'] = format #The format, for syntax hilighting
 			params['paste_expire_date'] = "N" #The expiration, N = no expiry
 			params['submit'] = "submit"
-			params['regexp'] = '^http://.*pastebin.com/(.*)$'
+			params['regexp'] = '^http://.*pastebin.com(.*)$'
 		elif website == "http://pastebin.ca":
 			params['name'] = user
 			params['content'] = content
