@@ -1,3 +1,18 @@
+pastebinit (1.2-2) experimental; urgency=low
+
+  * new upstream release
+    - drop all current patches as they have been pushed upstream
+    - lots of fixed bugs:
+      + document -f FORMAT option. LP: #614873, Closes: #562827
+      + document the config file and its format. LP: #435303, Closes #574661
+      + add support for paste.kde.org. LP: #700644, Closes: #608264
+      + honor pastebin definitions from ~/.pastebin.d/. LP: #701039
+  * install pastebin definitions to /usr/share/ instead of /etc. LP: #621923
+  * ship upstream README file in package
+  * debian/copyright: update my copyright
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Mon, 31 Jan 2011 07:51:54 +0800
+
 pastebinit (1.1-3) experimental; urgency=low
 
   * 30-lsb.patch: set default pastebin according to OS (LP: #648298)
