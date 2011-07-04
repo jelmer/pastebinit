@@ -1,3 +1,10 @@
+pastebinit (1.2-3) unstable; urgency=low
+
+  * update to latest Debian policy and release to unstable pocket
+    (no further changes necessary)
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Mon, 04 Jul 2011 09:48:21 +0900
+
 pastebinit (1.2-2) experimental; urgency=low
 
   * new upstream release
