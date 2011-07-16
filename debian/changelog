@@ -1,3 +1,9 @@
+pastebinit (1.2-4) unstable; urgency=low
+
+  * debian/pastebinit.preinst: add #DEBHELPER# token to script
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sat, 16 Jul 2011 15:58:04 +0900
+
 pastebinit (1.2-3) unstable; urgency=low
 
   * update to latest Debian policy and release to unstable pocket
