@@ -2,7 +2,7 @@
 
 # Drop unchanged conffiles in deprecated location without triggering a dpkg question
 # c.f. LP: #621923 and http://wiki.debian.org/DpkgConffileHandling
-# BEGIN FIXME: use dpkg-maintscript-helper when my main OS supports it
+# BEGIN FIXME: use dpkg-maintscript-helper when my main OS supports it (dpkg > 1.15.7)
 
 prep_mv_conffile() {
     local PKGNAME="$1"
@@ -35,5 +35,7 @@ install|upgrade)
 esac
 
 # END FIXME
+
+#DEBHELPER#
 
 exit 0
