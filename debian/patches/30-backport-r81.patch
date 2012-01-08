@@ -1,0 +1,13 @@
+diff --git a/pastebinit b/pastebinit
+index 2c2f937..d1c15ba 100755
+--- a/pastebinit
++++ b/pastebinit
+@@ -67,7 +67,7 @@ try:
+                     print >> sys.stderr, _("%s: no 'basename' in [pastebin]") % filename
+                     continue
+                 pastebind[basename] = bininstance
+-            return pastebind
++        return pastebind
+ 
+     # pastey.net obfuscates parent ids for replies.  Rather than taking the
+     # post ID given as the parent ID, we must handle this by going to that
