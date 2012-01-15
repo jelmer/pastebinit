@@ -1,3 +1,9 @@
+pastebinit (1.1-2squeeze1) stable; urgency=low
+
+  * backport upstream r81. Closes: #655179 (fix user config files support)
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sun, 15 Jan 2012 13:16:51 +0800
+
 pastebinit (1.1-2) unstable; urgency=low
 
   * debian/copyright: update to latest status
