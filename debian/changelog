@@ -1,3 +1,20 @@
+pastebinit (1.3-1) unstable; urgency=low
+
+  * New upstream release 1.3
+    - added support for paste.pound-python.org. Closes: #633072
+    - added support for format option on paste.debian.net. Closes: #624592
+    - improved feedback on site errors. Closes: #614072
+    - properly document default pastebin as distro-specific. LP: #755997
+    - properly name config file for pb.daviey.com. LP: #809371
+  * debian/compat: bump to version 7
+  * debian/copyright: update my copyright claim to 2012
+  * debian/rules: add dummy build-arch and build-indep target
+
+    not moving to dh_python2. If the python maintainer does not care enough
+    to fix LP 788524 why should I?
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Thu, 16 Feb 2012 22:43:30 +0800
+
 pastebinit (1.2-4) unstable; urgency=low
 
   * debian/pastebinit.preinst: add #DEBHELPER# token to script
