@@ -1,45 +1,9 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
+%:
+	dh $@
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
-build-arch: build
-build-indep: build
-
-build:
+override_dh_auto_build:
 	xsltproc -''-nonet /usr/share/sgml/docbook/stylesheet/xsl/nwalsh/manpages/docbook.xsl pastebinit.xml
 	
 	# build translations
 	(cd po; $(MAKE))
-
-clean:
-	dh_testdir
-	dh_testroot
-	dh_clean pastebinit.1
-	rm -f po/mo/*/LC_MESSAGES/pastebinit.mo
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	dh_install
-
-binary-arch: build install
-binary-indep: build install
-	dh_testdir
-	dh_testroot
-	dh_pycentral
-	dh_installchangelogs 
-	dh_installdocs
-	dh_installman
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install
