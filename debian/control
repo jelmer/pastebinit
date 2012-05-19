@@ -14,6 +14,7 @@ Vcs-Git: git://git.debian.org/collab-maint/pastebinit.git
 Package: pastebinit
 Architecture: all
 Depends: python, python-configobj, ${python:Depends}, ${misc:Depends}
+Recommends: lsb-release
 Breaks: bikeshed (<< 1.21)
 Replaces: bikeshed (<< 1.21)
 XB-Python-Version: ${python:Versions}
