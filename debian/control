@@ -3,7 +3,7 @@ Section: misc
 Priority: optional
 Maintainer: Rolf Leggewie <foss@rolf.leggewie.biz>
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50~)
+Build-Depends: debhelper (>= 7.0.50~), python-support
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl
 XS-Python-Version: all
 Standards-Version: 3.9.3
