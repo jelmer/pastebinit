@@ -5,7 +5,7 @@ Maintainer: Rolf Leggewie <foss@rolf.leggewie.biz>
 Build-Depends: debhelper (>= 7.0.50~), python-support
 Build-Depends-Indep: xsltproc, docbook-xml, docbook-xsl
 XS-Python-Version: all
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://launchpad.net/pastebinit/
 Vcs-Browser: http://git.debian.org/?p=collab-maint/pastebinit.git
 Vcs-Git: git://git.debian.org/collab-maint/pastebinit.git
