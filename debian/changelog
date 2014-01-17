@@ -1,3 +1,25 @@
+pastebinit (1.4-1) unstable; urgency=low
+
+  [ Bart Martens ]
+  * update watch file
+
+  [ Rolf Leggewie ]
+  * new upstream release 1.4
+    - upstream bugfixes
+      ~ crash in create_connection(). LP: #1032221
+      ~ point shebang to python3. LP: #988468
+      ~ allow calling pastebin by basename. Closes: #705979, LP: #977331
+      ~ allow pasting several files at once. Closes: #946895
+    - control: bump python to python3 in run-time dependencies
+               remove python-configobj from run-time dependencies
+    - drop all debian-patches as obsolete
+  * control:
+    - drop obsolete DMUA field
+    - update to standard version 3.9.5. No further changes.
+  * copyright: update upstream and my copyright to 2014
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Fri, 17 Jan 2014 17:32:21 +0800
+
 pastebinit (1.3-4) unstable; urgency=low
 
   [ Stéphane Graber ]
