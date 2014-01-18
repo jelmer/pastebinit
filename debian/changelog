@@ -1,3 +1,14 @@
+pastebinit (1.4-2) unstable; urgency=low
+
+  * patches:
+    ~ update upstream to r205. Fix unicode problem. LP: #1270359
+      This essentially gives us upstream release 1.4.1
+    ~ increase timeout to 15s to account for bad networks
+  * watch: only check for 2-level (major.minor) upstream releases
+  * drop preinst script as obsolete
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sat, 18 Jan 2014 14:12:37 +0800
+
 pastebinit (1.4-1) unstable; urgency=low
 
   [ Bart Martens ]
@@ -9,7 +20,7 @@ pastebinit (1.4-1) unstable; urgency=low
       ~ crash in create_connection(). LP: #1032221
       ~ point shebang to python3. LP: #988468
       ~ allow calling pastebin by basename. Closes: #705979, LP: #977331
-      ~ allow pasting several files at once. Closes: #946895
+      ~ allow pasting several files at once. Closes: #662242
     - control: bump python to python3 in run-time dependencies
                remove python-configobj from run-time dependencies
     - drop all debian-patches as obsolete
