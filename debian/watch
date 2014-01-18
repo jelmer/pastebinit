@@ -1,2 +1,2 @@
 version=3
-https://launchpad.net/pastebinit/ .*/pastebinit-(\d.*)\.(?:tgz|tar\.(?:gz|bz2|xz))
+https://launchpad.net/pastebinit/+download .*/pastebinit-(\d\.\d)\.(?:tgz|tar\.(?:gz|bz2|xz))
