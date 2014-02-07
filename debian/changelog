@@ -1,3 +1,10 @@
+pastebinit (1.4-3) unstable; urgency=low
+
+  * bump debhelper to version 9
+  * control: drop some obsolete python options
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Sat, 08 Feb 2014 00:43:27 +0800
+
 pastebinit (1.4-2) unstable; urgency=low
 
   * patches:
