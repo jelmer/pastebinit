@@ -1,2 +1,3 @@
 upstream-r205_r201.patch
 increase_timeout.patch
+detect_distro_with_python3.patch
