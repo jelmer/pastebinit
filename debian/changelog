@@ -1,3 +1,14 @@
+pastebinit (1.4-4) unstable; urgency=medium
+
+  [ Andrew Starr-Bochicchio ]
+  * detect_distro_with_python3.patch: Use platform instead of
+    lsb_release to detect the distro as lsb_release is not
+    available under Python 3 (Closes: #760341). pastebinit
+    will now default again to using paste.debian.net on Debian
+    (Closes: #778336).
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Tue, 17 Feb 2015 11:35:07 +0800
+
 pastebinit (1.4-3) unstable; urgency=low
 
   * bump debhelper to version 9
