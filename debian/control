@@ -12,7 +12,6 @@ Vcs-Git: git://git.debian.org/collab-maint/pastebinit.git
 Package: pastebinit
 Architecture: all
 Depends: python3, ${misc:Depends}
-Recommends: lsb-release
 Breaks: bikeshed (<< 1.21)
 Replaces: bikeshed (<< 1.21)
 Description: command-line pastebin client
