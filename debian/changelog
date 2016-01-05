@@ -1,4 +1,11 @@
-pastebinit (1.4-5) unstable; urgency=medium
+pastebinit (1.4-6) unstable; urgency=medium
+
+  [ Alberto Fuentes ]
+  * patches: fix format line in slexy.org configuration. Closes: #743394
+
+ -- Rolf Leggewie <foss@rolf.leggewie.biz>  Tue, 05 Jan 2016 20:22:00 +0800
+
+pastebinit (1.4-5) UNRELEASED; urgency=medium
 
   [ Bart Martens ]
   * watch: make the syntax more robust
