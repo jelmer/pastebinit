@@ -1,11 +1,10 @@
-
 USING PASTEBIN.D FILES
 
 To enable support for private pastebins, first you will need to know the fields
 that are in use by the pastebin when posting data.
 
-Add a file in the ~/pastebin.d or /etc/pastebin.d/ directory with the following
-format:
+Add a file in the ~/.pastebin.d or /etc/pastebin.d/ directory with the
+following format:
 
 [pastebin]
 basename = domain.name
@@ -60,9 +59,6 @@ A number of reserved keywords can be used, but are optional:
 	format -	contains the format setting:
 			usually used for syntax highlighting.
 
-	parentpid -	contains the parent post ID for 
-			pastebins that use it.
-
 	permatag -	contains permatag as set at the command
 			line.
 
@@ -74,6 +70,8 @@ A number of reserved keywords can be used, but are optional:
 
 	jabberid -	contains the jabberid for the poster
 			as set at the command line.
+
+	private -	make the paste private if possible
 
 Two additional special parameters are available for use:
 
